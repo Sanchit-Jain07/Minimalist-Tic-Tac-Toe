@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <button class="theme"><i class="far fa-moon"></i></button>
+        <div class="reset">
+            <button class="resetbtn">Start Again?</button>
+        </div>
+        <div class="x-win win">
+            <p>X HAS WON!</p>
+        </div>
+        <div class="o-win win">
+            <p>O HAS WON!</p>
+        </div>
+        <div class="win tie">
+            <p>IT'S A TIE!</p>
+        </div>
+        <div class="grid-container">
+            <div class="vertical strike"></div>
+            <div class="diagonal strike"></div>
+            <div class="horizontal strike"></div>
+            <table>
+                <tr>
+                    <td id="1"><button class="btn"></button></td>
+                    <td id="2" class="vert"><button class="btn"></button></td>
+                    <td id="3"><button class="btn"></button></td>
+                </tr>
+                <tr>
+                    <td id="4" class="hori"><button class="btn"></button></td>
+                    <td id="5" class="vert hori"><button class="btn"></button></td>
+                    <td id="6" class="hori"><button class="btn"></button></td>
+                </tr>
+                <tr>
+                    <td id="7"><button class="btn"></button></td>
+                    <td id="8" class="vert"><button class="btn"></button></td>
+                    <td id="9"><button class="btn"></button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --accent-color: #3da1ff;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --accent-color: #af16fc;
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  background-color: var(--secondary-color);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.win {
+  transition: background-color 0.5s ease-in;
+  background-color: var(--accent-color);
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.x-win {
+  left: -100vw;
+  transition: left 0.4s ease-out;
+}
+
+.o-win {
+  right: -100vw;
+  transition: right 0.4s ease-in-out;
+}
+
+.tie {
+  height: 150px;
+  bottom: -100vh;
+  transition: bottom 0.4s ease-in-out;
+}
+
+td {
+  width: 100px;
+  height: 100px;
+}
+
+.hori {
+  border: 0;
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.vert {
+  border-left: 2px solid var(--primary-color);
+  border-right: 2px solid var(--primary-color);
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  color: var(--primary-color);
+  cursor: not-allowed;
+}
+
+.win p {
+  color: var(--primary-color);
+  font-size: 50px;
+}
+
+.grid-container {
+  position: relative;
+}
+
+.strike {
+  transition: background-color 0.5s ease-in;
+  position: absolute;
+  background-color: var(--primary-color);
+}
+
+.vertical {
+  width: 3px;
+  height: 0px;
+  left: 50px;
+  transition: height 0.4s ease-in-out;
+}
+
+.horizontal {
+  height: 3px;
+  width: 0px;
+  top: 50px;
+  transition: width 0.4s ease-in-out;
+}
+
+.diagonal {
+  width: 3px;
+  height: 0px;
+  transform-origin: top;
+  left: 0;
+  transition: height 0.4s ease-in-out;
+  transform: rotate(-45deg);
+}
+
+.reset {
+  position: absolute;
+  top: -10%;
+  transition: top 0.4s ease-in-out;
+}
+
+.resetbtn {
+  transition: background-color 0.5s ease-in;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-family: inherit;
+  border: 0;
+  border-radius: 20px;
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.resetbtn:focus {
+  outline: 0;
+}
+
+.theme {
+  transition: background-color 0.5s ease-in;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  height: 40px;
+  width: 50px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.theme:focus {
+  outline: 0;
+}
